@@ -9,8 +9,8 @@ RUN apt-get update && apt-get install -y nginx && \
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # Copy project files
-COPY project1 /var/www/html/mikhmon-old
-COPY project2 /var/www/html/mikhmon-new
+COPY mikhmon-old /var/www/html/mikhmon-old
+COPY mikhmon-new /var/www/html/mikhmon-new
 
 # Set file permissions
 RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
